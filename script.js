@@ -79,10 +79,12 @@ prev.addEventListener("click", () => {
     if(page != 1){
         page = page-1;
        getMovies(APIURL+(page));
+       document.documentElement.scrollTop = 0;
     }
 });
 
 next.addEventListener("click", () => {
     page = page+1;
     getMovies(APIURL+(page));
+    document.documentElement.scrollTop = 0;
 });
